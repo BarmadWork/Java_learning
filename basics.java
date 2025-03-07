@@ -150,6 +150,47 @@ public class basics {
 
     }
 
+    public static void practiceWithPrintf() {
+
+        String name = "Bob";
+        char firstLetter = 'B';
+        int age = 25;
+        double height = 180.5;
+        boolean isEmployed = false;
+
+        System.out.printf("Hello %s\n", name);
+        System.out.printf("Your name start with a %c\n", firstLetter);
+        System.out.printf("You are %d years old\n", age);
+        System.out.printf("You are %.1f cm tall\n", height);
+        System.out.printf("Employed: %b\n", isEmployed);
+
+        // flags
+        double number1 = 99999.99678;
+        double number2 = 4977.34456;
+        double number3 = -679000.4555;
+
+        System.out.println("\nThe flag \'+\' outputs a plus only with positive numbers.");
+        System.out.printf("%+f\n", number1);
+        System.out.printf("%+f\n", number2);
+        System.out.printf("%+f\n", number3);
+
+        System.out.println("\nUse \'.2\' to display only 2 decimal numbers.");
+        System.out.printf("%+.2f\n", number1);
+        System.out.printf("%+.2f\n", number2);
+        System.out.printf("%+.2f\n", number3);
+
+        System.out.println("\nUse \',\' for grouping numbers, useful for prices.");
+        System.out.printf("%,+.2f\n", number1);
+        System.out.printf("%,+.2f\n", number2);
+        System.out.printf("%,+.2f\n", number3);
+
+        System.out.println("\nUse numbers for alignment");
+        System.out.printf("%14.2f\n", number1);
+        System.out.printf("%14.2f\n", number2);
+        System.out.printf("%14.2f\n", number3);
+
+    }
+
     public static void main(String[] args) {
 
         /* 
@@ -158,7 +199,8 @@ public class basics {
         // beginers();
         // practiceWithUserInput();
         // practiceWithRandom();
-        practiceWithMath();
+        // practiceWithMath();
+        practiceWithPrintf();
 
     }
 }
