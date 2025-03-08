@@ -191,6 +191,42 @@ public class basics {
 
     }
 
+    static void practiceWithStringMethods() {
+
+        System.out.println("Some useful String methods!");
+
+        String name = "Barmad Shreef";
+        String password = "password";
+
+        System.out.println("length of the name is: " + name.length());
+        System.out.println("The character at index 5 is: " + name.charAt(5));
+        System.out.println("The the index of the first \'a\' is: " + name.indexOf('a'));
+        System.out.println("The the index of the last \'a\' is: " + name.lastIndexOf('a'));
+
+        System.out.println("The name to uppercase: " + name.toUpperCase());
+        System.out.println("The name to lowercase: " + name.toLowerCase());
+
+        System.out.println("Replace \'a\' with \'o\': " + name.replace('a', 'o'));
+
+        if (name.isEmpty()) {
+            System.out.println("The name i empty!");
+        } else {
+            System.out.println("Hello " + name);
+        }
+
+        if (name.contains(" ")) {
+            System.out.println("The name contains a whit space!");
+        } else {
+            System.out.println("The name DOESN'T contains a any spaces!");
+        }
+
+        System.out.println(name.equals("barmad"));
+
+        if (password.equals("password")) {
+            System.out.println("The password should not be \'password\'");
+        }
+    }
+
     public static void main(String[] args) {
 
         /* 
@@ -200,7 +236,8 @@ public class basics {
         // practiceWithUserInput();
         // practiceWithRandom();
         // practiceWithMath();
-        practiceWithPrintf();
+        // practiceWithPrintf();
+        practiceWithStringMethods();
 
     }
 }
