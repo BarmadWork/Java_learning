@@ -195,36 +195,60 @@ public class basics {
 
         System.out.println("Some useful String methods!");
 
-        String name = "Barmad Shreef";
-        String password = "password";
+        try (Scanner scanner = new Scanner(System.in)) {
+            String name;
+            String password;
+            String email;
 
-        System.out.println("length of the name is: " + name.length());
-        System.out.println("The character at index 5 is: " + name.charAt(5));
-        System.out.println("The the index of the first \'a\' is: " + name.indexOf('a'));
-        System.out.println("The the index of the last \'a\' is: " + name.lastIndexOf('a'));
+            System.out.print("Enter your name: ");
+            name = scanner.nextLine();
+            System.out.print("Enter your email: ");
+            email = scanner.nextLine();
+            System.out.print("Enter your password: ");
+            password = scanner.nextLine();
 
-        System.out.println("The name to uppercase: " + name.toUpperCase());
-        System.out.println("The name to lowercase: " + name.toLowerCase());
+            if (name.isEmpty()) {
+                System.out.println("The name is empty!");
+            } else {
+                System.out.println("Hello " + name);
+                System.out.println("length of the name is: " + name.length());
+                System.out.println("The character at index 0 is: " + name.charAt(0));
+                System.out.println("The the index of the first \'a\' is: " + name.indexOf('a'));
+                System.out.println("The the index of the last \'a\' is: " + name.lastIndexOf('a'));
 
-        System.out.println("Replace \'a\' with \'o\': " + name.replace('a', 'o'));
+                System.out.println("The name to uppercase: " + name.toUpperCase());
+                System.out.println("The name to lowercase: " + name.toLowerCase());
+                System.out.println("Replace \'a\' with \'o\': " + name.replace('a', 'o'));
 
-        if (name.isEmpty()) {
-            System.out.println("The name i empty!");
-        } else {
-            System.out.println("Hello " + name);
+                if (name.contains(" ")) {
+                    System.out.println("The name contains a whit space!");
+                } else {
+                    System.out.println("The name DOESN'T contains a any spaces!");
+                }
+            }
+
+            if (password.isEmpty()) {
+                System.out.println("The password is empty!");
+            } else if (password.equals("password")) {
+                System.out.println("The password should not be \'password\'");
+            } else if (!password.matches(".*\\d.*")) {
+                System.out.println("The password should contains at least one number!");
+            } else {
+                System.out.println("The password is fine!");
+            }
+
+            if (email.isEmpty()) {
+                System.out.println("The email is empty!");
+            } else if (!email.contains(
+                    "@")) {
+                System.out.println("Enter a valid email!");
+            } else {
+                System.out.println("Username is: " + email.substring(0, email.indexOf('@')));
+                System.out.println("Domain is: " + email.substring(email.indexOf('@') + 1));
+            }
+            scanner.close();
         }
 
-        if (name.contains(" ")) {
-            System.out.println("The name contains a whit space!");
-        } else {
-            System.out.println("The name DOESN'T contains a any spaces!");
-        }
-
-        System.out.println(name.equals("barmad"));
-
-        if (password.equals("password")) {
-            System.out.println("The password should not be \'password\'");
-        }
     }
 
     public static void main(String[] args) {
