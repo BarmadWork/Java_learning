@@ -251,6 +251,28 @@ public class basics {
 
     }
 
+    static void parcticeWithEnhancedSwitches() {
+
+        System.out.print("Enter the day of the week: ");
+        try (Scanner scanner = new Scanner(System.in)) {
+            String day = scanner.nextLine();
+
+            switch (day) {
+                case "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" -> {
+                    System.out.println("It is a weekday, you should work!");
+                }
+                case "Saturday", "Sunday" -> {
+                    System.out.println("It is the weekend, you should have fun!");
+                }
+
+                default -> {
+                    System.out.println(day + " is not a day!!");
+                }
+            }
+            scanner.close();
+        }
+    }
+
     public static void main(String[] args) {
 
         /* 
@@ -261,7 +283,8 @@ public class basics {
         // practiceWithRandom();
         // practiceWithMath();
         // practiceWithPrintf();
-        practiceWithStringMethods();
+        // practiceWithStringMethods();
+        parcticeWithEnhancedSwitches();
 
     }
 }
