@@ -191,7 +191,7 @@ public class basics {
 
     }
 
-    static void practiceWithStringMethods() {
+    public static void practiceWithStringMethods() {
 
         System.out.println("Some useful String methods!");
 
@@ -251,7 +251,7 @@ public class basics {
 
     }
 
-    static void parcticeWithEnhancedSwitches() {
+    public static void parcticeWithEnhancedSwitches() {
 
         System.out.print("Enter the day of the week: ");
         try (Scanner scanner = new Scanner(System.in)) {
