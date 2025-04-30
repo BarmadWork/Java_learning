@@ -1,1 +1,58 @@
+# --- Java ---
 *.class
+*.jar
+*.war
+*.ear
+
+# --- Build directories ---
+target/
+build/
+out/
+
+# --- Logs ---
+*.log
+
+# --- Maven Wrapper ---
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/
+mvnw
+mvnw.cmd
+
+# --- Gradle Wrapper ---
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+gradlew
+gradlew.bat
+
+# --- IDEs ---
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.project
+.classpath
+.settings/
+.metadata/
+
+# --- OS/Editor junk ---
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+*.tmp
+
+# --- Environment files ---
+*.env
+*.keystore
+*.p12
+*.pem
+
+# --- Test/coverage ---
+*.exec
+coverage/
+jacoco.exec
+
+# --- Others ---
+dependency-reduced-pom.xml
+
